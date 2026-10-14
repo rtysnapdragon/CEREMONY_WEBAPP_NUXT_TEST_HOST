@@ -1,5 +1,5 @@
 import getOwnerComponentPaths from "./app/utils/getComponentPaths";
-import NUXT_MODULE from "../NUXT_MODULES/WEBAPP_NUXT_MODULE/src/module";
+// import NUXT_MODULE from "../NUXT_MODULES/WEBAPP_NUXT_MODULE/src/module";
 import getComponentPaths from "../NUXT_MODULES/WEBAPP_NUXT_MODULE/src/runtime/app/utils/getComponentPaths";
 import { resolve } from "node:path";
 // import { resolve } from "pathe"
@@ -31,7 +31,8 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@pinia/nuxt",
     "@nuxt/content",
-    NUXT_MODULE,
+    'webapp-nuxt-module'
+    // NUXT_MODULE,
   ],
   ssr: false,
 
@@ -46,7 +47,7 @@ export default defineNuxtConfig({
     },
   },
   components: [
-    ...(getComponentPaths() ?? []),
+    // ...(getComponentPaths() ?? []),
     ...(getOwnerComponentPaths() ?? []),
     // ...(getLayersComponentPaths(layers) ?? []),
   ],
