@@ -132,7 +132,7 @@
 import { z } from 'zod'
 definePageMeta({ layout: 'auth',title:'login' })
 
-const toast = useRToast()
+const toast = useToast()
 const { tr } = useTr()
 const authStore = useAuthStore()
 
