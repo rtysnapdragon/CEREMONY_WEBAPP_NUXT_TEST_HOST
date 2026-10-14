@@ -1,0 +1,105 @@
+@use 'tokens';
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Great+Vibes&family=Noto+Serif+Khmer:wght@400;600;700&family=Inter:wght@400;500;600&family=Kantumruy+Pro:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--w-bg);
+  color: var(--w-text);
+  font-family: var(--w-font-body);
+  transition: background var(--w-dur-med) var(--w-ease), color var(--w-dur-med) var(--w-ease);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--w-font-display);
+  margin: 0;
+  color: var(--w-text);
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+// khmer text runs — attach this class whenever rendering km strings so the
+// serif khmer face + line-height kicks in even inside a latin-font parent
+.w-km {
+  font-family: var(--w-font-khmer);
+  line-height: 1.8;
+}
+
+.w-container {
+  width: 100%;
+  max-width: var(--w-container);
+  margin: 0 auto;
+  padding: 0 var(--w-space-md);
+}
+
+.w-eyebrow {
+  font-family: var(--w-font-body);
+  font-size: var(--w-fs-small);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--w-primary-strong);
+}
+
+.w-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--w-space-xs);
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--w-radius-pill);
+  border: 1px solid var(--w-border);
+  background: var(--w-primary);
+  color: var(--w-on-primary);
+  font-family: var(--w-font-body);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform var(--w-dur-fast) var(--w-ease), box-shadow var(--w-dur-fast) var(--w-ease);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px var(--w-shadow);
+  }
+
+  &--ghost {
+    background: transparent;
+    color: var(--w-primary-strong);
+  }
+}
+
+.w-glass {
+  background: var(--w-surface-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--w-border);
+  border-radius: var(--w-radius-lg);
+}
+
+// scroll reveal used by WSection
+.w-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--w-dur-slow) var(--w-ease), transform var(--w-dur-slow) var(--w-ease);
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .w-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

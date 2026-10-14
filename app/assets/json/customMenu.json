@@ -1,0 +1,103 @@
+{
+  "menu": [
+    {
+      "id": "dashboard",
+      "key": "home",
+      "label": "home",
+      "color":"#0b3558",
+      "icon": "i-heroicons-home",
+      "to": "/"
+    },
+    {
+      "id": "analytics",
+      "key": "analytics",
+      "label": "analytics",
+      "color":"#0b3558",
+      "icon": "i-heroicons-chart-bar",
+      "to": "/analytics",
+      "children": [
+        { "key": "overview", "label": "overview", "color":"#0b3558", "to": "/analytics/overview" },
+        { "key": "live_network", "label": "live_network", "color":"#0b3558", "to": "/analytics/live-network" },
+        { "key": "todos", "label": "todos", "color":"#0b3558", "to": "/analytics/todos" }
+      ]
+    },
+    {
+      "id": "users",
+      "key": "users",
+      "label": "users",
+      "color":"#0b3558",
+      "icon": "i-heroicons-users",
+      "to": "/users",
+      "children": [
+        { "key": "all_users", "label": "all_users", "color":"#0b3558", "to": "/users" },
+        { "key": "roles", "label": "roles", "color":"#0b3558", "to": "/users/roles" }
+      ]
+    },
+    {
+      "id": "messages",
+      "key": "messages",
+      "label": "messages",
+      "color":"#0b3558",
+      "icon": "i-heroicons-chat-bubble-left-right",
+      "to": "/messages",
+      "children": [
+        { "key": "all_messages", "label": "all_messages", "color":"#0b3558", "to": "/messages" },
+        { "key": "roles", "label": "roles", "color":"#0b3558", "to": "/messages/roles" }
+      ]
+    },
+    {
+      "id": "apps",
+      "key": "apps",
+      "color":"#0b3558",
+      "label": "apps",
+      "isGroup": true
+    },
+    {
+      "id": "reports",
+      "key": "reports",
+      "label": "reports",
+      "color":"#0b3558",
+      "icon": "i-heroicons-arrow-trending-up",
+      "to": "/reports"
+    },
+    {
+      "id": "integrations",
+      "key": "integrations",
+      "color":"#0b3558",
+      "label": "integrations",
+      "icon": "i-heroicons-squares-plus",
+      "to": "/integrations",
+      "children": [
+        { "key": "api", "label": "api", "color":"#0b3558", "to": "/integrations/api" },
+        { "key": "webhooks", "label": "webhooks", "color":"#0b3558", "to": "/integrations/webhooks" },
+        { "key": "plugins", "label": "plugins", "to": "/integrations/plugins" }
+      ]
+    }
+  ],
+  "bottom": [
+    {
+      "id": "settings",
+      "key": "settings",
+      "label": "settings",
+      "color":"#0b3558",
+      "icon": "i-heroicons-cog-6-tooth",
+      "to": "/settings"
+    },
+    {
+      "id": "help",
+      "key": "help",
+      "label": "help_and_info",
+      "icon": "i-heroicons-information-circle",
+      "color":"#0b3558",
+      "to": "/help"
+    },
+    {
+      "id": "logout",
+      "key": "logout",
+      "label": "logout",
+      "color":"#0b3558",
+      "icon": "i-heroicons-arrow-right-on-rectangle",
+      "to": "/logout"
+    }
+  ]
+}

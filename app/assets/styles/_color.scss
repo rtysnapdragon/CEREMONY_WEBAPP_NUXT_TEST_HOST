@@ -1,0 +1,111 @@
+
+/* ============================================
+   SARIKA — Design Tokens
+   CSS Variables Only (max 10 color vars)
+   ============================================ */
+
+:root {
+  /* ── SURFACES ── */
+  --bg-primary: #f8f9fb;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f3f6;
+  --bg-page: #f7f7f7;
+  --bg-card:#ffffff;
+  --c-primary: #ff8c42;
+
+  /* ── COLOR PALETTE (10 max) ── */
+  --c-bg:        #ffffff;
+  --c-surface:   #ffffff;
+  --c-accent:    #ff8c42;
+  --c-border:    rgba(255, 140, 66, 0.16);
+  --c-accent-2:  #ffb347;
+  --c-text:      #1a1510;
+  --c-muted:     #8a7f72;
+  --c-success:   #4ade80;
+  --c-danger:    #f87171;
+  --c-info:      #60a5fa;
+  --c-hover:     rgb(133, 129, 127, 0.2);
+  --c-active:     #ff8c42;
+  --c-hover-bg:   rgba(243, 235, 235, 0.2) !important;
+
+  // --color-w-b-1:#4a4545;
+  // --color-w-b-2:#554f4f;
+  // --color-w-b-3:#8b3e3e;
+  // --color-w-b-4: #dad5d5;
+  // --color-w-b-5:#f8f5f0;
+  // --color-w-b-6:#e8e2d9;
+
+  --color-green:#4ade80;
+  --color-blue:#60a5fa;
+  --color-yellow:#ffb347;
+  --color-red:#f87171;
+  --color-orange:#ff8c42;
+  --color-warning:#ff8c42;
+
+  /* ── TYPOGRAPHY ── */
+  --font-fallback: 'Inter', 'Battambang','NotoSansKhmer', system-ui, sans-serif;
+  
+  /* ── GLASS ── */
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-blur: blur(24px) saturate(180%);
+  --glass-blur-sm: blur(12px) saturate(150%);
+  --glass-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.08),
+    0 1px 0 rgba(255, 255, 255, 0.8) inset;
+  --glass-border: rgba(255, 140, 66, 0.16);
+
+  /* ── GLOW ── */
+  --glow-accent-sm: 0 0 16px rgba(255, 140, 66, 0.18);
+  --glow-text: 0 0 12px rgba(255, 140, 66, 0.25);
+  --glow-accent:
+    0 0 40px rgba(255, 140, 66, 0.08),
+    0 0 80px rgba(255, 140, 66, 0.03);
+}
+
+
+/* ── SYSTEM DARK ── */
+.dark{
+  --bg-secondary:#332d2d;
+  --bg-tertiary: #080707;
+
+  --bg-page: #051d1f;
+  --bg-c-card:#0d0c0b;
+  
+  --c-bg:        #0a0a0b;
+  --c-surface:   #141414;
+  --c-border:    rgba(255, 140, 66, 0.12);
+  --c-text:      #f0ece4;
+  --c-muted:     #a9a9aa;
+  --c-accent:    #ff8c42;
+  --c-accent-2:  #ffb347;
+  --c-success:   #4ade80;
+  --c-danger:    #f87171;
+  --c-info:      #60a5fa;
+  --c-hover:     rgba(85, 85, 85, 0.2);
+  --c-active:    #8aa70b;
+  --c-hover-bg:  rgba(134, 131, 131, 0.2) !important;
+
+  // --color-w-b-1: #c1bcbc;
+  // --color-w-b-2: #797272;
+  // --color-w-b-3: #9e7575;
+  // --color-w-b-4: #e8e2d9;
+  // --color-w-b-5: #f8f5f0;
+  // --color-w-b-6: #9e7575;
+
+  --color-green:#4ade80;
+  --color-blue:#60a5fa;
+  --color-yellow:#ffb347;
+  --color-red:#f87171;
+  --color-orange:#ff8c42;
+  --color-warning:#ff8c42;
+
+  --glass-bg: rgba(19, 19, 26, 0.72);
+  --glass-blur: blur(24px) saturate(180%);
+  --glass-blur-sm: blur(12px) saturate(150%);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.6), 0 1px 0 rgba(255,255,255,0.04) inset;
+  --glass-border: rgba(255, 140, 66, 0.12);
+
+  --glow-accent-sm: 0 0 16px rgba(255, 140, 66, 0.3);
+  --glow-text: 0 0 20px rgba(255, 140, 66, 0.5);
+  --glow-accent: 0 0 40px rgba(255, 140, 66, 0.12), 0 0 80px rgba(255, 140, 66, 0.04);
+}

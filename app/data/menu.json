@@ -1,0 +1,32 @@
+[
+  {
+    "id": "home",
+    "labelKey": "nav.home",
+    "path": "/",
+    "icon": "home"
+  },
+  {
+    "id": "about",
+    "labelKey": "nav.about",
+    "path": "/#about",
+    "icon": "user"
+  },
+  {
+    "id": "skills",
+    "labelKey": "nav.skills",
+    "path": "/#skills",
+    "icon": "code"
+  },
+  {
+    "id": "projects",
+    "labelKey": "nav.projects",
+    "path": "/#projects",
+    "icon": "briefcase"
+  },
+  {
+    "id": "contact",
+    "labelKey": "nav.contact",
+    "path": "/#contact",
+    "icon": "mail"
+  }
+]

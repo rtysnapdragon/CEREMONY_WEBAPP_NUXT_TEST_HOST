@@ -1,0 +1,171 @@
+// ==========================================================================
+// SARIKA WEDDING · design tokens
+// CSS custom properties only — no SCSS $variables, no mixins.
+// Palette is drawn from the reference invitations: warm gold + rose on
+// cream (light) and gold-on-midnight "celestial" (dark).
+// ==========================================================================
+
+:root {
+  // ---- brand palette ----
+  --w-gold-50: #fbf6ea;
+  --w-gold-100: #f2e2ba;
+  --w-gold-300: #ddb46b;
+  --w-gold-500: #c9974b; // primary
+  --w-gold-700: #a87b34;
+  --w-gold-900: #7a5722;
+
+  --w-rose-300: #f3c9c9;
+  --w-rose-500: #d46a6a; // accent
+  --w-rose-700: #a94848;
+
+  --w-ink-900: #2b2420;
+  --w-ink-700: #55483e;
+  --w-ink-400: #8a7b6f;
+
+  --w-cream-50: #fffdf9;
+  --w-cream-100: #fffbf5;
+  --w-cream-200: #f7efe1;
+
+  // ---- semantic (light theme, default) ----
+  --w-bg: var(--w-cream-100);
+  --w-bg-alt: var(--w-cream-200);
+  --w-surface: #ffffff;
+  --w-surface-glass: rgba(255, 255, 255, 0.55);
+  --w-border: rgba(169, 123, 52, 0.25);
+  --w-text: var(--w-ink-900);
+  --w-text-soft: var(--w-ink-700);
+  --w-text-muted: var(--w-ink-400);
+  --w-primary: var(--w-gold-500);
+  --w-primary-strong: var(--w-gold-700);
+  --w-accent: var(--w-rose-500);
+  --w-on-primary: #ffffff;
+  --w-shadow: rgba(122, 87, 34, 0.16);
+  --w-overlay: rgba(43, 36, 32, 0.45);
+
+  // ---- typography ----
+  --w-font-display: 'Playfair Display', 'Noto Serif Khmer', serif;
+  --w-font-script: 'Great Vibes', 'Playfair Display', cursive;
+  --w-font-khmer: 'Noto Serif Khmer', serif;
+  --w-font-body: 'Inter', 'Kantumruy Pro', sans-serif;
+
+  --w-fs-hero: clamp(2.4rem, 6vw, 4.2rem);
+  --w-fs-h1: clamp(1.8rem, 4vw, 2.6rem);
+  --w-fs-h2: clamp(1.4rem, 3vw, 1.9rem);
+  --w-fs-body: 1rem;
+  --w-fs-small: 0.85rem;
+
+  // ---- spacing / radius / motion ----
+  --w-space-xs: 0.5rem;
+  --w-space-sm: 1rem;
+  --w-space-md: 1.75rem;
+  --w-space-lg: 3rem;
+  --w-space-xl: 5rem;
+
+  --w-radius-sm: 8px;
+  --w-radius-md: 16px;
+  --w-radius-lg: 28px;
+  --w-radius-pill: 999px;
+
+  --w-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --w-dur-fast: 200ms;
+  --w-dur-med: 500ms;
+  --w-dur-slow: 900ms;
+
+  --w-container: 720px;
+  --w-header-h: 64px;
+}
+
+// ---- dark / "celestial" theme ----
+.dark {
+  --w-bg: #0e1224;
+  --w-bg-alt: #141a33;
+  --w-surface: #171d38;
+  --w-surface-glass: rgba(23, 29, 56, 0.55);
+  --w-border: rgba(201, 151, 75, 0.3);
+  --w-text: #f4ecd8;
+  --w-text-soft: #cbbfae;
+  --w-text-muted: #8b8aa3;
+  --w-primary: var(--w-gold-300);
+  --w-primary-strong: var(--w-gold-500);
+  --w-accent: var(--w-rose-300);
+  --w-on-primary: #1a1430;
+  --w-shadow: rgba(0, 0, 0, 0.5);
+  --w-overlay: rgba(6, 8, 20, 0.6);
+}
+
+
+
+// khmer text runs — attach this class whenever rendering km strings so the
+// serif khmer face + line-height kicks in even inside a latin-font parent
+.w-km {
+  font-family: var(--w-font-khmer);
+  line-height: 1.8;
+}
+
+.w-container {
+  width: 100%;
+  max-width: var(--w-container);
+  margin: 0 auto;
+  padding: 0 var(--w-space-md);
+}
+
+.w-eyebrow {
+  font-family: var(--w-font-body);
+  font-size: var(--w-fs-small);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--w-primary-strong);
+}
+
+.w-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--w-space-xs);
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--w-radius-pill);
+  border: 1px solid var(--w-border);
+  background: var(--w-primary);
+  color: var(--w-on-primary);
+  font-family: var(--w-font-body);
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform var(--w-dur-fast) var(--w-ease), box-shadow var(--w-dur-fast) var(--w-ease);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px var(--w-shadow);
+  }
+
+  &--ghost {
+    background: transparent;
+    color: var(--w-primary-strong);
+  }
+}
+
+.w-glass {
+  background: var(--w-surface-glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--w-border);
+  border-radius: var(--w-radius-lg);
+}
+
+// scroll reveal used by WSection
+.w-reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--w-dur-slow) var(--w-ease), transform var(--w-dur-slow) var(--w-ease);
+
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .w-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

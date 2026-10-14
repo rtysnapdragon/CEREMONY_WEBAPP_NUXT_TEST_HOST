@@ -1,0 +1,68 @@
+// app/assets/scss/_letter.scss
+// Mixins only (no $variables, no CSS output). Theming is done with CSS custom
+// properties (--lx-*) set on each template root.
+//
+// Breakpoints are CONTAINER queries, not viewport media queries, so the same
+// template reacts to the width of the editor's device frame (mobile / tablet /
+// desktop) and to the real screen on the customer page.
+//
+//   mobile  : default (mobile-first)
+//   tablet  : container >= 600px
+//   desktop : container >= 960px
+
+// Wrap the whole template in an element that uses this mixin.
+@mixin lx-frame {
+  container-type: inline-size;
+  container-name: lx;
+  width: 100%;
+}
+
+@mixin lx-narrow  { @container lx (max-width: 359px) { @content; } }
+@mixin lx-tablet  { @container lx (min-width: 600px) { @content; } }
+@mixin lx-desktop { @container lx (min-width: 960px) { @content; } }
+
+// Centered "card" column that grows with the container.
+@mixin lx-card-column {
+  width: 100%;
+  margin-inline: auto;
+
+  @include lx-tablet  { max-width: 720px; }
+  @include lx-desktop { max-width: 880px; }
+}
+
+@mixin lx-reduce-motion {
+  @media (prefers-reduced-motion: reduce) { @content; }
+}
+
+// Min 44px touch target + visible keyboard focus.
+@mixin lx-interactive($ring: currentColor) {
+  min-height: 44px;
+  touch-action: manipulation;
+
+  &:focus-visible {
+    outline: 2px solid $ring;
+    outline-offset: 2px;
+  }
+}
+
+// Responsive photo grid: 2 cols on phones, more as the container grows.
+@mixin lx-photo-grid($gap: 8px) {
+  display: grid;
+  gap: $gap;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  @include lx-tablet  { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  @include lx-desktop { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+// Stack a 3-column "A ♥ B" couple grid on very small screens.
+@mixin lx-couple-stack {
+  @include lx-narrow {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+@mixin lx-safe-bottom($offset: 12px) {
+  bottom: max(#{$offset}, env(safe-area-inset-bottom));
+}

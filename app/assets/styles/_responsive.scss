@@ -1,0 +1,247 @@
+/* ============================================
+   SARIKA — Responsive Layout
+   ============================================ */
+
+/* ── BREAKPOINTS ── */
+/* xs: < 480px | sm: 480–768px | md: 768–1024px | lg: 1024–1280px | xl: 1280px+ */
+
+/* ── APP SHELL ── */
+.app-shell {
+  display: flex;
+  min-height: 100dvh;
+
+  .app-sidebar {
+    width: var(--sidebar-width);
+    flex-shrink: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    transition: width var(--t-spring), transform var(--t-spring);
+
+    &.collapsed { width: var(--sidebar-collapsed); }
+  }
+
+  .app-main {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    min-width: 0;
+    transition: margin-left var(--t-spring);
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+
+    &.sidebar-collapsed { margin-left: var(--sidebar-collapsed); }
+  }
+}
+
+/* ── HEADER ── */
+.app-header {
+  height: var(--header-height);
+  padding: 0 var(--sp-6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  background: rgba(10,10,11,0.8);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--c-border);
+}
+
+/* ── CONTENT AREA ── */
+.app-content {
+  flex: 1;
+  padding: var(--sp-6) var(--sp-8);
+
+  @media (max-width: 1280px) { padding: var(--sp-5) var(--sp-6); }
+  @media (max-width: 768px)  { padding: var(--sp-4); }
+}
+
+/* ── DASHBOARD GRID ── */
+.dashboard-grid {
+  display: grid;
+  gap: var(--sp-5);
+  grid-template-columns: repeat(4, 1fr);
+
+  @media (max-width: 1024px) { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 640px)  { grid-template-columns: 1fr; }
+
+  .col-1   { grid-column: span 1; }
+  .col-2   { grid-column: span 2; }
+  .col-3   { grid-column: span 3; }
+  .col-4   { grid-column: span 4; }
+  .col-full { grid-column: 1 / -1; }
+
+  @media (max-width: 1024px) {
+    .col-2, .col-3, .col-4 { grid-column: 1 / -1; }
+  }
+  @media (max-width: 640px) {
+    .col-1, .col-2, .col-3, .col-4 { grid-column: 1 / -1; }
+  }
+}
+
+/* ── SIDEBAR OVERLAY (mobile) ── */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  z-index: 99;
+
+  @media (max-width: 1024px) {
+    &.active { display: block; }
+  }
+}
+
+/* ── TABLET: SEMI-COLLAPSE ── */
+@media (max-width: 1024px) {
+  .app-shell {
+    .app-sidebar {
+      width: var(--sidebar-collapsed);
+      transform: translateX(0);
+
+      &.mobile-open {
+        width: var(--sidebar-width);
+        box-shadow: 0 0 60px rgba(0,0,0,0.8);
+      }
+    }
+
+    .app-main {
+      margin-left: var(--sidebar-collapsed);
+      &.sidebar-collapsed { margin-left: var(--sidebar-collapsed); }
+    }
+  }
+}
+
+/* ── MOBILE: BOTTOM NAV + NO SIDEBAR ── */
+@media (max-width: 768px) {
+  .app-shell {
+    .app-sidebar {
+      width: var(--sidebar-width);
+      transform: translateX(-100%);
+
+      &.mobile-open {
+        transform: translateX(0);
+        box-shadow: 0 0 60px rgba(0,0,0,0.9);
+      }
+    }
+
+    .app-main {
+      margin-left: 0;
+      padding-bottom: var(--bottom-nav-height);
+    }
+  }
+}
+
+/* ── BOTTOM NAVIGATION ── */
+.bottom-nav {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--c-surface);
+  height: var(--bottom-nav-height);
+  backdrop-filter: var(--glass-blur);
+  border-top: 1px solid var(--c-border);
+  z-index: 100;
+  padding: 0 var(--sp-2);
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding: var(--sp-2) var(--sp-3);
+    border-radius: var(--r-md);
+    cursor: pointer;
+    transition: all var(--t-fast);
+    color: var(--c-muted);
+    font-size: 0.625rem;
+    font-weight: 500;
+    text-decoration: none;
+
+    i { font-size: 1.25rem; transition: all var(--t-fast); }
+
+    &.active {
+      color: var(--c-accent);
+      i { filter: drop-shadow(0 0 6px rgba(255,140,66,0.6)); }
+    }
+  }
+}
+
+/* ── RESPONSIVE HELPERS ── */
+.hide-mobile { @media (max-width: 768px) { display: none !important; } }
+.hide-tablet { @media (max-width: 1024px) { display: none !important; } }
+.hide-desktop { @media (min-width: 769px) { display: none !important; } }
+.show-mobile { display: none; @media (max-width: 768px) { display: flex !important; } }
+
+/* ── STICKY MOBILE ACTIONS ── */
+.mobile-sticky-actions {
+  display: none;
+  position: fixed;
+  bottom: calc(var(--bottom-nav-height) + var(--sp-4));
+  right: var(--sp-4);
+  z-index: 98;
+  flex-direction: column;
+  gap: var(--sp-2);
+
+  @media (max-width: 768px) { display: flex; }
+}
+
+/* ── DRAWER ── */
+.mobile-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  pointer-events: none;
+
+  &.open { pointer-events: all; }
+
+  .drawer-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: opacity var(--t-base);
+  }
+
+  &.open .drawer-backdrop { opacity: 1; }
+
+  .drawer-panel {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--c-surface);
+    border-radius: var(--r-2xl) var(--r-2xl) 0 0;
+    padding: var(--sp-6);
+    transform: translateY(100%);
+    transition: transform var(--t-spring);
+    max-height: 85dvh;
+    overflow-y: auto;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 4px;
+      border-radius: var(--r-full);
+      background: var(--c-border);
+      margin: 0 auto var(--sp-5);
+    }
+  }
+
+  &.open .drawer-panel { transform: translateY(0); }
+}

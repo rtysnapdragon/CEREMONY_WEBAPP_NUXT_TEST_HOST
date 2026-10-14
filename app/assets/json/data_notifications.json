@@ -1,0 +1,55 @@
+[
+  {
+    "id": "n-001",
+    "type": "rsvp",
+    "icon": "ri-user-add-line",
+    "titleKey": "notification.rsvpConfirmed",
+    "title": "New RSVP Confirmed",
+    "titleKm": "ការបញ្ជាក់ RSVP ថ្មី",
+    "message": "Meas Ratha confirmed attendance for Sopheap & Dara Wedding",
+    "messageKm": "មាស រដ្ឋា បានបញ្ជាក់ការចូលរួម",
+    "time": "2025-11-01T09:30:00",
+    "read": false,
+    "color": "success",
+    "eventId": "evt-001"
+  },
+  {
+    "id": "n-002",
+    "type": "task",
+    "icon": "ri-task-line",
+    "title": "Task Due Tomorrow",
+    "titleKm": "កិច្ចការសំខាន់ ណាស់ ថ្ងៃស្អែក",
+    "message": "Send digital invitations is due tomorrow",
+    "messageKm": "ការផ្ញើការអញ្ជើញឌីជីថលត្រូវដល់ថ្ងៃស្អែក",
+    "time": "2025-11-14T08:00:00",
+    "read": false,
+    "color": "warning",
+    "eventId": "evt-001"
+  },
+  {
+    "id": "n-003",
+    "type": "budget",
+    "icon": "ri-money-dollar-circle-line",
+    "title": "Budget Alert",
+    "titleKm": "ការជូនដំណឹងថវិកា",
+    "message": "Catering budget at 70% utilized",
+    "messageKm": "ថវិកាម្ហូបអាហារប្រើ 70% ហើយ",
+    "time": "2025-10-28T14:15:00",
+    "read": true,
+    "color": "info",
+    "eventId": "evt-001"
+  },
+  {
+    "id": "n-004",
+    "type": "system",
+    "icon": "ri-shield-check-line",
+    "title": "Account Verified",
+    "titleKm": "គណនីបានផ្ទៀងផ្ទាត់",
+    "message": "Your account has been successfully verified",
+    "messageKm": "គណនីរបស់អ្នកបានផ្ទៀងផ្ទាត់ដោយជោគជ័យ",
+    "time": "2025-10-20T10:00:00",
+    "read": true,
+    "color": "accent",
+    "eventId": null
+  }
+]

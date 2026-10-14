@@ -1,0 +1,121 @@
+{
+  "totalBudget": 25000,
+  "spent": 18400,
+  "currency": "USD",
+  "categories": [
+    {
+      "id": "bc-01",
+      "name": "Venue",
+      "nameKm": "ទីកន្លែង",
+      "icon": "ri-building-2-line",
+      "allocated": 8000,
+      "spent": 8000,
+      "color": "#ff8c42"
+    },
+    {
+      "id": "bc-02",
+      "name": "Catering",
+      "nameKm": "ម្ហូបអាហារ",
+      "icon": "ri-restaurant-line",
+      "allocated": 6000,
+      "spent": 4200,
+      "color": "#60a5fa"
+    },
+    {
+      "id": "bc-03",
+      "name": "Photography",
+      "nameKm": "ថតរូប",
+      "icon": "ri-camera-3-line",
+      "allocated": 2500,
+      "spent": 2500,
+      "color": "#4ade80"
+    },
+    {
+      "id": "bc-04",
+      "name": "Decorations",
+      "nameKm": "ការតុបតែង",
+      "icon": "ri-flower-line",
+      "allocated": 3000,
+      "spent": 1800,
+      "color": "#f472b6"
+    },
+    {
+      "id": "bc-05",
+      "name": "Attire",
+      "nameKm": "សំលៀកបំពាក់",
+      "icon": "ri-shirt-line",
+      "allocated": 2000,
+      "spent": 1200,
+      "color": "#a78bfa"
+    },
+    {
+      "id": "bc-06",
+      "name": "Entertainment",
+      "nameKm": "កម្សាន្ត",
+      "icon": "ri-music-2-line",
+      "allocated": 1500,
+      "spent": 700,
+      "color": "#fb923c"
+    },
+    {
+      "id": "bc-07",
+      "name": "Invitations",
+      "nameKm": "ការអញ្ជើញ",
+      "icon": "ri-mail-line",
+      "allocated": 500,
+      "spent": 0,
+      "color": "#34d399"
+    },
+    {
+      "id": "bc-08",
+      "name": "Miscellaneous",
+      "nameKm": "ផ្សេងៗ",
+      "icon": "ri-more-2-line",
+      "allocated": 1500,
+      "spent": 0,
+      "color": "#7a7585"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "tx-001",
+      "description": "Venue deposit",
+      "descriptionKm": "ប្រាក់កក់ទីកន្លែង",
+      "category": "bc-01",
+      "amount": 4000,
+      "date": "2025-10-01",
+      "type": "expense",
+      "status": "paid"
+    },
+    {
+      "id": "tx-002",
+      "description": "Venue final payment",
+      "descriptionKm": "ការទូទាត់ចុងក្រោយទីកន្លែង",
+      "category": "bc-01",
+      "amount": 4000,
+      "date": "2025-11-01",
+      "type": "expense",
+      "status": "paid"
+    },
+    {
+      "id": "tx-003",
+      "description": "Photography deposit",
+      "descriptionKm": "ប្រាក់កក់ជាងថតរូប",
+      "category": "bc-03",
+      "amount": 1250,
+      "date": "2025-09-20",
+      "type": "expense",
+      "status": "paid"
+    },
+    {
+      "id": "tx-004",
+      "description": "Catering advance",
+      "descriptionKm": "ប្រាក់ទូទាត់ជាមុនម្ហូបអាហារ",
+      "category": "bc-02",
+      "amount": 4200,
+      "date": "2025-10-15",
+      "type": "expense",
+      "status": "paid"
+    }
+  ]
+}

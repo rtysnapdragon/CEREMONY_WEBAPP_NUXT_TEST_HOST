@@ -1,0 +1,48 @@
+[
+  {
+    "module": [
+      {
+        "route": "/dashboard",
+        "icon": "ri-command-fill text-icon-sm sm:text-icon-md md:text-icon-lg lg:text-icon-2xl",
+        "title": "dashboard",
+        "description": "Manage All Data In Learning System."
+      },
+      {
+        "route": "#",
+        "icon": "ri-currency-fill text-icon-sm sm:text-icon-md md:text-icon-lg lg:text-icon-2xl",
+        "title": "Payment",
+        "description": "Manage All Users Data In Learning System."
+      },
+      {
+        "route": "#",
+        "icon": "ri-secure-payment-fill text-icon-sm sm:text-icon-md md:text-icon-lg lg:text-icon-2xl",
+        "title": "Financial",
+        "description": "Manage All Users Data In Learning System."
+      },
+      {
+        "route": "#",
+        "icon": "ri-group-line text-icon-sm sm:text-icon-md md:text-icon-lg lg:text-icon-2xl",
+        "title": "Employee",
+        "description": "Manage All Users Data In Learning System."
+      },
+      {
+        "route": "#",
+        "icon": "ri-user-2-line text-icon-sm sm:text-icon-md md:text-icon-lg lg:text-icon-2xl",
+        "title": "User Privilege",
+        "description": "Manage All Users Data In Learning System."
+      },
+      {
+        "route": "/Analytics",
+        "icon": "ri-line-chart-fill text-icon-sm sm:text-icon-md md:text-icon-lg lg:text-icon-2xl",
+        "title": "Report Analytics",
+        "description": "Manage All Data Report In Learning System."
+      },
+      {
+        "route": "/packageVersionControl",
+        "icon": "ri-git-fork-line text-icon-sm sm:text-icon-md md:text-icon-lg lg:text-icon-2xl",
+        "title": "Version Control",
+        "description": "Manage All Data Report In Learning System."
+      }
+    ]
+  }
+]

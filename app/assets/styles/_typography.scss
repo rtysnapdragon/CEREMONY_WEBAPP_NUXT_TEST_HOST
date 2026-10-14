@@ -1,0 +1,69 @@
+/* ============================================
+   SARIKA — Typography
+   ============================================ */
+
+/* ── FONT FACE DECLARATIONS ── */
+/* SarikaSans/SarikaDisplay woff2 files not present — falling back to system stack */
+
+/* ── Khmer Font (loaded from CDN via <link>) ── */
+/* Battambang covers km locale — declared in app.head or via link tag */
+
+/* ── TYPE SCALE ── */
+.text-xs    { font-size: 0.6875rem; line-height: 1.4; }
+.text-sm    { font-size: 0.8125rem; line-height: 1.5; }
+.text-base  { font-size: 0.9375rem; line-height: 1.6; }
+.text-lg    { font-size: 1.0625rem; line-height: 1.55; }
+.text-xl    { font-size: 1.25rem;   line-height: 1.4; }
+.text-2xl   { font-size: 1.5rem;    line-height: 1.35; }
+.text-3xl   { font-size: 1.875rem;  line-height: 1.25; }
+.text-4xl   { font-size: 2.25rem;   line-height: 1.2; }
+.text-5xl   { font-size: 3rem;      line-height: 1.1; }
+.text-6xl   { font-size: 3.75rem;   line-height: 1.05; }
+
+/* ── DISPLAY HEADINGS ── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-700);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--c-text);
+  line-height: 1.2;
+}
+
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
+h2 { font-size: clamp(1.5rem, 3.5vw, 2.25rem); }
+h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.0625rem; }
+h6 { font-size: 0.9375rem; }
+
+/* ── UTILITY ── */
+.font-display { font-family: var(--font-800); }
+.font-body    { font-family: var(--font-400); }
+.font-mono    { font-family: 'JetBrains Mono', 'Fira Code', monospace; font-size: 0.875em; }
+
+.text-accent  { color: var(--c-accent); }
+.text-muted   { color: var(--c-muted); }
+.text-success { color: var(--c-success); }
+.text-danger  { color: var(--c-danger); }
+.text-info    { color: var(--c-info); }
+
+.gradient-text {
+  background: linear-gradient(135deg, var(--c-accent), var(--c-accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Khmer locale overrides ── */
+:lang(km) {
+  font-family: 'Battambang', var(--font-400);
+  line-height: 1.8;
+  letter-spacing: 0;
+}
+
+:lang(km) h1,
+:lang(km) h2,
+:lang(km) h3,
+:lang(km) h4 {
+  font-family: 'Battambang', var(--font-700);
+}

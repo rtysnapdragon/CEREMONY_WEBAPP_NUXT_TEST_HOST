@@ -1,0 +1,283 @@
+{
+  "menu": [
+    {
+      "id": "dashboard",
+      "key": "dashboard",
+      "label": "dashboard",
+      "icon": "ri-dashboard-line",
+      "to": "/",
+      "permission": "VIEW_WEDDING"
+    },
+    {
+      "id": "events",
+      "key": "events",
+      "label": "events",
+      "icon": "ri-calendar-event-line",
+      "to": "/events",
+      "permission": "VIEW_WEDDING",
+      "role": "SUPER_ADMIN"
+    },
+    {
+      "id": "letter_setup",
+      "key": "letter_setup",
+      "label": "letter_setup",
+      "icon": "ri-palette-line",
+      "to": "/letter_setup",
+      "permission": "WEDDING_SETTING"
+    },
+    {
+      "id": "invitation",
+      "key": "invitation",
+      "label": "invitation",
+      "icon": "ri-mail-ai-line",
+      "to": "/invitation",
+      "permission": "SEND_INVITATION"
+    },
+    {
+      "id": "guest_management",
+      "key": "guest_management",
+      "label": "guest_management",
+      "icon": "ri-group-line",
+      "to": "/guest_management",
+      "permission": "VIEW_GUEST"
+    },
+    {
+      "id": "checkin",
+      "key": "checkin",
+      "label": "checkin",
+      "icon": "ri-qr-scan-ai-line",
+      "to": "/checkin",
+      "permission": "CHECKIN_GUEST",
+      "role": "SUPER_ADMIN"
+    },
+    {
+      "id": "qr_center",
+      "key": "qr_center",
+      "label": "qr_center",
+      "icon": "ri-qr-code-line",
+      "to": "/qr",
+      "permission": "VIEW_GUEST",
+      "role": "SUPER_ADMIN"
+    },
+    {
+      "id": "tables",
+      "key": "tables",
+      "label": "tables",
+      "icon": "ri-table-line",
+      "to": "/tables",
+      "permission": "VIEW_TABLE",
+      "role": "SUPER_ADMIN"
+    },
+    {
+      "id": "tasks",
+      "key": "tasks",
+      "label": "task",
+      "icon": "ri-task-line",
+      "to": "/tasks",
+      "permission": "VIEW_TASK",
+      "badgeDynamic": "pendingTasks"
+    },
+    {
+      "id": "budget",
+      "key": "budget_menu",
+      "label": "budget",
+      "icon": "ri-money-dollar-circle-line",
+      "to": "/budget",
+      "permission": "MANAGE_BUDGET"
+    },
+    {
+      "id": "gift_record",
+      "key": "gift_records",
+      "label": "gift_records",
+      "icon": "ri-gift-2-line",
+      "to": "/gift_record",
+      "permission": "ADD_GIFT_RECORD"
+    },
+    {
+      "id": "gallery",
+      "key": "gallery",
+      "label": "gallery",
+      "icon": "ri-image-2-line",
+      "to": "/gallery",
+      "permission": "VIEW_MEDIA"
+    },
+    {
+      "id": "wishes",
+      "key": "wishes",
+      "label": "wishes",
+      "icon": "ri-heart-3-line",
+      "to": "/wishes",
+      "permission": "VIEW_WEDDING"
+    },
+    {
+      "id": "articles",
+      "key": "articles",
+      "label": "articles",
+      "icon": "ri-article-line",
+      "to": "/content/articles",
+      "permission": "VIEW_ARTICLE",
+      "role": "SUPER_ADMIN"
+    },
+    {
+      "id": "article_categories",
+      "key": "article_categories",
+      "label": "article_categories",
+      "icon": "ri-price-tag-3-line",
+      "to": "/content/categories",
+      "permission": "VIEW_ARTICLE",
+      "role": "SUPER_ADMIN"
+    },
+    {
+      "id": "media_library",
+      "key": "media_library",
+      "label": "media_library",
+      "icon": "ri-image-line",
+      "to": "/media",
+      "permission": "VIEW_MEDIA",
+      "role": "SUPER_ADMIN"
+    },
+    {
+      "id": "notifications",
+      "key": "notifications_menu",
+      "label": "notification",
+      "icon": "ri-notification-3-line",
+      "to": "/notifications",
+      "permission": "VIEW_NOTIFICATION",
+      "badgeDynamic": "unreadNotifications"
+    },
+    {
+      "id": "ai_translate",
+      "key": "ai_translate",
+      "label": "ai_translate",
+      "icon": "ri-sparkling-2-line",
+      "to": "/ai/translate",
+      "permission": "MANAGE_GLOBAL_SETTINGS",
+      "role": "SUPER_ADMIN"
+    },
+    {
+      "id": "ai_batch_translate",
+      "key": "ai_batch_translate",
+      "label": "ai_batch_translate",
+      "icon": "ri-translate-ai-2",
+      "to": "/ai/batch-translate",
+      "permission": "MANAGE_GLOBAL_SETTINGS",
+      "role": "SUPER_ADMIN"
+    },
+    {
+      "id": "users",
+      "key": "users",
+      "label": "users",
+      "icon": "ri-shield-user-line",
+      "to": "/user_and_privilege/user_management",
+      "permission": "VIEW_USER"
+    },
+    {
+      "id": "admin_organizations",
+      "key": "admin_organizations",
+      "label": "organizations",
+      "icon": "ri-building-2-line",
+      "to": "/admin/organizations",
+      "role": "SUPER_ADMIN",
+      "permission": "ORG_VIEW"
+    },
+    {
+      "id": "admin_plans",
+      "key": "admin_plans",
+      "label": "subscription_plans",
+      "icon": "ri-vip-crown-line",
+      "to": "/admin/plans",
+      "permission": "SUBSCRIPTION_MANAGE",
+      "role": "SUPER_ADMIN"
+    },
+    {
+      "id": "admin_event_types",
+      "key": "admin_event_types",
+      "label": "event_types",
+      "icon": "ri-calendar-event-line",
+      "to": "/admin/event-types",
+      "permission": "MANAGE_GLOBAL_SETTINGS",
+      "role": "SUPER_ADMIN"
+    },
+    {
+      "id": "admin_languages",
+      "key": "admin_languages",
+      "label": "languages",
+      "icon": "ri-translate-2",
+      "to": "/admin/languages",
+      "permission": "MANAGE_GLOBAL_SETTINGS",
+      "role": "SUPER_ADMIN"
+    },
+    {
+      "id": "admin_themes",
+      "key": "admin_themes",
+      "label": "theme_manager",
+      "icon": "ri-palette-line",
+      "to": "/admin/themes",
+      "permission": "MANAGE_THEME",
+      "role": "SUPER_ADMIN"
+    },
+    {
+      "id": "admin_invite_themes",
+      "key": "admin_invite_themes",
+      "label": "invite_themes",
+      "icon": "ri-mail-star-line",
+      "to": "/admin/invite-themes",
+      "permission": "MANAGE_GLOBAL_SETTINGS",
+      "role": "SUPER_ADMIN"
+    },
+    {
+      "id": "admin_translations",
+      "key": "admin_translations",
+      "label": "translations",
+      "icon": "ri-table-alt-line",
+      "to": "/admin/translations",
+      "permission": "MANAGE_GLOBAL_SETTINGS",
+      "role": "SUPER_ADMIN"
+    },
+    {
+      "id": "admin_ai_config",
+      "key": "admin_ai_config",
+      "label": "ai_config",
+      "icon": "ri-apps-ai-line",
+      "to": "/admin/ai-config",
+      "permission": "MANAGE_GLOBAL_SETTINGS",
+      "role": "SUPER_ADMIN"
+    },
+    {
+      "id": "admin_prompts",
+      "key": "admin_prompts",
+      "label": "prompt_manager",
+      "icon": "ri-robot-2-line",
+      "to": "/admin/prompts",
+      "permission": "MANAGE_GLOBAL_SETTINGS",
+      "role": "SUPER_ADMIN"
+    },
+    {
+      "id": "admin_templates",
+      "key": "admin_templates",
+      "label": "invitation_templates",
+      "icon": "ri-mail-settings-line",
+      "to": "/admin/templates",
+      "permission": "MANAGE_GLOBAL_SETTINGS",
+      "role": "SUPER_ADMIN"
+    }
+  ],
+  "bottom": [
+    {
+      "id": "settings",
+      "key": "settings",
+      "label": "settings",
+      "icon": "i-heroicons-cog-6-tooth",
+      "to": "/settings"
+    },
+    {
+      "id": "help",
+      "key": "help_and_info",
+      "label": "help_and_info",
+      "icon": "i-heroicons-information-circle",
+      "to": "/help",
+      "permission": "MANAGE_GLOBAL_SETTINGS",
+      "role": "SUPER_ADMIN"
+    }
+  ]
+}

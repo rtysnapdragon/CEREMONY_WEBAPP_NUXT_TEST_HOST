@@ -1,0 +1,98 @@
+[
+  {
+    "id": "t-001",
+    "title": "Book wedding venue",
+    "titleKm": "កក់ទីកន្លែងអាពាហ៍ពិពាហ៍",
+    "category": "venue",
+    "priority": "high",
+    "status": "completed",
+    "dueDate": "2025-10-01",
+    "assignee": "Sopheap",
+    "eventId": "evt-001",
+    "notes": "Deposit paid"
+  },
+  {
+    "id": "t-002",
+    "title": "Send digital invitations",
+    "titleKm": "ផ្ញើការអញ្ជើញឌីជីថល",
+    "category": "invitation",
+    "priority": "high",
+    "status": "in-progress",
+    "dueDate": "2025-11-15",
+    "assignee": "Dara",
+    "eventId": "evt-001",
+    "notes": "200 sent, 120 pending"
+  },
+  {
+    "id": "t-003",
+    "title": "Arrange floral decorations",
+    "titleKm": "រៀបចំការតុបតែងផ្កា",
+    "category": "decor",
+    "priority": "medium",
+    "status": "pending",
+    "dueDate": "2025-12-10",
+    "assignee": "Sopheap",
+    "eventId": "evt-001",
+    "notes": ""
+  },
+  {
+    "id": "t-004",
+    "title": "Hire photographer",
+    "titleKm": "ជួលជាងថតរូប",
+    "category": "media",
+    "priority": "high",
+    "status": "completed",
+    "dueDate": "2025-09-15",
+    "assignee": "Dara",
+    "eventId": "evt-001",
+    "notes": "Contract signed with Studio K"
+  },
+  {
+    "id": "t-005",
+    "title": "Finalize menu with caterer",
+    "titleKm": "បញ្ចប់ម៉ឺនុយជាមួយអ្នកចម្អិន",
+    "category": "catering",
+    "priority": "high",
+    "status": "in-progress",
+    "dueDate": "2025-11-30",
+    "assignee": "Sopheap",
+    "eventId": "evt-001",
+    "notes": "Tasting session scheduled"
+  },
+  {
+    "id": "t-006",
+    "title": "Order wedding cake",
+    "titleKm": "កុម្មង់នំអាពាហ៍ពិពាហ៍",
+    "category": "catering",
+    "priority": "medium",
+    "status": "pending",
+    "dueDate": "2025-12-01",
+    "assignee": "Dara",
+    "eventId": "evt-001",
+    "notes": ""
+  },
+  {
+    "id": "t-007",
+    "title": "Plan honeymoon itinerary",
+    "titleKm": "រៀបចំកម្មវិធីទេសចរណ៍ honeymoon",
+    "category": "travel",
+    "priority": "low",
+    "status": "pending",
+    "dueDate": "2025-12-25",
+    "assignee": "Sopheap",
+    "eventId": "evt-001",
+    "notes": ""
+  },
+  {
+    "id": "t-008",
+    "title": "Confirm guest seating chart",
+    "titleKm": "បញ្ជាក់តារាង​អ​ង្គ​ការ​ភ្ញៀវ",
+    "category": "guest",
+    "priority": "high",
+    "status": "pending",
+    "dueDate": "2025-12-15",
+    "assignee": "Dara",
+    "eventId": "evt-001",
+    "notes": "Waiting for final RSVPs"
+  }
+]
