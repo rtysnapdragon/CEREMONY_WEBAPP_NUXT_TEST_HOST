@@ -31,7 +31,6 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@pinia/nuxt",
     "@nuxt/content",
-    'webapp-nuxt-module'
     // NUXT_MODULE,
   ],
   ssr: false,
