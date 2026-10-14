@@ -97,7 +97,7 @@
 import { computed } from 'vue'
 definePageMeta({layout:'navbar'})
 
-const toast = useRToast()
+const toast = useToast()
 
 // Count active toasts
 const toastCount = computed(() => toast.toasts.value.length)

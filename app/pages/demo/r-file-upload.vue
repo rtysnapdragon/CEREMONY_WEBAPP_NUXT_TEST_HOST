@@ -5,7 +5,7 @@ import { ref } from 'vue'
 // import { useUIStore } from '~/stores/ui'
 
 const ui = useUIStore()
-const toast = useRToast()
+const toast = useToast()
 
 // ── 1. Basic ──────────────────────────────────────────────────────────────
 const basicFiles = ref([])

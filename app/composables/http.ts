@@ -117,7 +117,7 @@ export const useHttp = async (
       // useToast() requires setup context — safe when called from a component/composable,
       // but silently skipped when called from a Pinia action outside setup.
       if (getCurrentInstance()) {
-        const toast = useRToast();
+        const toast = useToast();
         toast.add({ title, description, type, color });
       }
     } catch { /* no-op */ }

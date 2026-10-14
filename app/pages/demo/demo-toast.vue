@@ -1,7 +1,7 @@
 <script setup lang="ts">
 /**
  * pages/demo/toast.vue
- * Full showcase for RToast + useRToast — every mode, color, option
+ * Full showcase for RToast + useToast — every mode, color, option
  */
 import { h, ref } from 'vue'
 

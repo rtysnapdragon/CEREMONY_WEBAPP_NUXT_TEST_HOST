@@ -163,7 +163,7 @@ definePageMeta({ layout: 'navbar', middleware: 'permission', permission: 'VIEW_W
 const { tBy } = useSarikaLocale()
 const localePath = (p) => p || '/'
 const eventStore = useEventStore()
-const toast = useRToast()
+const toast = useToast()
 // const queryParams = useQueryParams()
 const showModal = ref(false)
 const editingEvent = ref(null)

@@ -258,7 +258,7 @@
 import { z } from 'zod'
 definePageMeta({ layout: 'auth' })
 
-const toast     = useRToast()
+const toast     = useToast()
 const { tr } = useTr()
 const authStore = useAuthStore()
 // ── State ───────────────────────────────────────────────────
