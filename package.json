@@ -50,7 +50,8 @@
     "vue": "^3.5.0",
     "vue-router": "^4.4.0",
     "xlsx": "^0.18.5",
-    "zod": "^4.4.3"
+    "zod": "^4.4.3",
+    "webapp-nuxt-module": "git+https://github.com/rtysnapdragon/WEBAPP_NUXT_MODULE.git#v1.0.0"
   },
   "devDependencies": {
     "@nuxt/eslint": "^1.15.1",
