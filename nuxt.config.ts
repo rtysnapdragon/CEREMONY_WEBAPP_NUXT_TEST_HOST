@@ -32,6 +32,8 @@ export default defineNuxtConfig({
     "@pinia/nuxt",
     "@nuxt/content",
     // NUXT_MODULE,
+    // Dynamically load your CDN-hosted module file directly
+    'https://cdn.jsdelivr.net/gh/rtysnapdragon/webapp-nuxt-module@v1.0.0/dist/index.js'
   ],
   ssr: false,
 
@@ -166,6 +168,17 @@ export default defineNuxtConfig({
           content: "#111111",
         },
       ],
+      script: [
+        {
+          src: 'https://cdn.jsdelivr.net/gh/rtysnapdragon/webapp-nuxt-module@v1.0.0/dist/index.js',
+          type: 'module',
+          defer: true
+        },
+        {
+          src: 'https://github.com/rtysnapdragon/WEBAPP_NUXT_MODULE/releases/download/v1.0.0/element.umd.js',
+          defer: true
+        }
+      ],
       link: [
         { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
         { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -205,6 +218,10 @@ export default defineNuxtConfig({
         // },
         // { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css' },
         // { rel: 'stylesheet', href: 'https://unpkg.com/@fortawesome/fontawesome-free@6.5.1/css/all.min.css' }
+        {
+          rel: 'stylesheet',
+          href: 'https://github.com/rtysnapdragon/WEBAPP_NUXT_MODULE/releases/download/v1.0.0/style.css'
+        }
       ],
       // script: [{ src:"https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4",defer: true}], // npm install jquery jquery-confirm
     },
