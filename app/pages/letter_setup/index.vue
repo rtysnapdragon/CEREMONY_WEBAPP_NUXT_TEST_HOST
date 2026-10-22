@@ -43,7 +43,7 @@
 import { buildHtml, downloadLetterHtml } from "~/utils/printLetter";
 import { buildSettingPayload, LETTER_TRANSLATIONS } from "~/utils/toSettingPayload";
 const { openPreview } = usePrintPreview();
-const breadcrumb = useBreadcrumb()
+const breadcrumb = useBreadCrumb()
 // ── Stores ────────────────────────────────────────────────────────────────
 const { tr } = useTr();
 const eventStore = useEventStore();

@@ -10,7 +10,7 @@
       RPageHeader / RBreadcrumb will pick it up automatically.
 ───────────────────────────────────────────────────────────────────────────── */
 
-const header = useBreadcrumb()
+const header = useBreadCrumb()
 
 // Title + icon
 header.setTitle(

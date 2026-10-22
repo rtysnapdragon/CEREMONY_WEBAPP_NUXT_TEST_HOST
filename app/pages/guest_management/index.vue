@@ -361,7 +361,7 @@ const {
   exportGuests,
 } = useGuestPage();
 
-// ── Header via useBreadcrumb state (rendered by <RBreadCrumb> in the layout) ──
+// ── Header via useBreadCrumb state (rendered by <RBreadCrumb> in the layout) ──
 const breadcrumb = usePageBreadcrumb({
   title: tr("common.guests"),
   icon: "ri-user-add-line",
